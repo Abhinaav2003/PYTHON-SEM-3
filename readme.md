@@ -1,6 +1,11 @@
-PYTHON LAB QUESTION
+# 🐍 Python Lab Programs
 
-Q1 WAP TO ADD 2 NUMBERS ?
-Q2 WAP TO ADD 2 NUMBER VALUE TAKEN FROM USER ?
-Q3 WAP TO SWAP 2 NUMBER WITHOUT USING 3RD VARIABLE ?
-Q4 WAP TO FIND THE LARGEST OF 3 NUMBERS ?
+---
+
+## 📌 Q1. WAP to Add Two Numbers ?
+
+## 📌 Q2. WAP to Add Two Numbers (Values Taken from User) ?
+
+## 📌 Q3. WAP to Swap Two Numbers Without Using a Third Variable ?
+
+## 📌 Q4. WAP to Find the Largest of Three Numbers ?
