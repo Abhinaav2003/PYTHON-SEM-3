@@ -1,8 +1,15 @@
-# WAP TO PRINT MULTIPLICATION TABLE OF A GIVEN NUMBER ?
+# WAP TO FIND THE LARGEST OF 3 NUMBERS ?
 
-num = int(input("Enter a number: "))
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
 
-print("Multiplication table of", num)
+if (a >= b) and (a >= c):
+    largest = a
+elif (b >= a) and (b >= c):
+    largest = b
+else:
+    largest = c
 
-for i in range(1, 11):
-    print(num, "x", i, "=", num*i)
+
+print("The largest number is", largest)

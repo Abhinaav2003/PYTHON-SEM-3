@@ -1,15 +1,13 @@
-# WAP TO FIND THE LARGEST OF 3 NUMBERS ?
+# WAP TO SWAP TWO NUMBERS USING THIRD VARIABLE ?
 
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-c = int(input("Enter third number: "))
+a = 10
+b = 20
 
-if (a >= b) and (a >= c):
-    largest = a
-elif (b >= a) and (b >= c):
-    largest = b
-else:
-    largest = c
+print("Before swapping: a =", a, "b =", b)
 
 
-print("The largest number is", largest)
+temp = a
+a = b
+b = temp
+
+print("After swapping: a =", a, "b =", b)

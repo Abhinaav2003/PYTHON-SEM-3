@@ -8,4 +8,6 @@
 
 ### 📌 Q3. WAP to Swap Two Numbers Without Using a Third Variable ?
 
-### 📌 Q4. WAP to Find the Largest of Three Numbers ?
+### 📌 Q4. WAP to Swap Two Numbers Using a Third Variable ?
+
+### 📌 Q5. WAP to Find the Largest of Three Numbers ?
