@@ -116,7 +116,7 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 244.08963012695312,
+			"x": 289.8113098144531,
 			"y": 124.4717025756836,
 			"rotation": 0,
 			"isLocked": false,
@@ -125,7 +125,7 @@
 			"id": "shape:UAMpg77KgZvCQRGORIBkg",
 			"type": "geo",
 			"props": {
-				"w": 591.3679504394531,
+				"w": 517.5425109863281,
 				"h": 104.66034698486328,
 				"geo": "rectangle",
 				"dash": "draw",
