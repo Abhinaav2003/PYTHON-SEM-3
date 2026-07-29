@@ -6,3 +6,5 @@ sum1 = sum(list1)
 
 print("Sum of all elements in the list is:", sum1)
 
+
+
