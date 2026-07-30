@@ -1,7 +1,5 @@
-#   WAP to find the sum of all elements in a list
+# WAP PRINT 1 TO 10 BY FOR LOOP ?
 
-list1 = [1, 2, 3, 4, 5]
+for i in range(1, 11):
 
-sum1 = sum(list1)
-
-print("Sum of all elements in the list is:", sum1)
+    print(i)
