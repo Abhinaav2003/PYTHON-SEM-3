@@ -12,3 +12,15 @@
 
 ### 📌 Q5. WAP to Find the Largest of Three Numbers ?
 
+### 📌 Q6. WAP to Print 1 to 10 Using For Loop ?
+
+### 📌 Q7. WAP to print the ascii value of a character ?
+
+### 📌 Q8. WAP to Print Numbers from 1 to N ?
+
+### 📌 Q9. Sum of First 10 Natural Numbers ?
+
+### 📌 Q10. WAP to find whether the candidate is eligible for admission or not based on his score marks, where the cutoff is 500 ?
+
+
+
