@@ -18,6 +18,6 @@
 
 ### 📌 Q8. WAP to Print Numbers from 1 to N ?
 
-### 📌 Q9. Sum of First 10 Natural Numbers ?
+### 📌 Q9. WAP to find Sum of First 10 Natural Numbers ?
 
 ### 📌 Q10. WAP to find Check Admission Eligibility , where the cutoff is 500 ?
