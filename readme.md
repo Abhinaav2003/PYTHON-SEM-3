@@ -21,3 +21,5 @@
 ### 📌 Q9. WAP to find Sum of First 10 Natural Numbers ?
 
 ### 📌 Q10. WAP to find Check Admission Eligibility , where the cutoff is 500 ?
+
+### 📌 Q11. 
