@@ -22,4 +22,4 @@
 
 ### 📌 Q10. WAP to find Check Admission Eligibility , where the cutoff is 500 ?
 
-### 📌 Q11.   
+### 📌 Q11.
