@@ -8,4 +8,3 @@ while num > 0:
     count += 1
 
 print("The number of digits in the number is:", count)
-
