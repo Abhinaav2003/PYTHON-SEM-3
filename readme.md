@@ -28,3 +28,5 @@
 ### 3. Count how many times a input number is repeated
 ### 4. Lcm of two digits
 ### 5. Exit
+
+### 📌 Q12. 
