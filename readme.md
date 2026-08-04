@@ -23,8 +23,8 @@
 ### 📌 Q10. WAP to find Check Admission Eligibility , where the cutoff is 500 ?
 
 ### 📌 Q11. 
-# 1. Sum of n natural numbers
-# 2. Reverse of given number
-# 3. Count how many times a input number is repeated
-# 4. Lcm of two digits
-# 5. Exit
+### 1. Sum of n natural numbers
+### 2. Reverse of given number
+### 3. Count how many times a input number is repeated
+### 4. Lcm of two digits
+### 5. Exit
