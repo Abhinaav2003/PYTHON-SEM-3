@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday 🎂</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Poppins", Arial, sans-serif;
+            color: white;
+            overflow-x: hidden;
+            background:
+                radial-gradient(circle at 20% 20%, #ff1493 0%, transparent 25%),
+                radial-gradient(circle at 80% 80%, #6a00ff 0%, transparent 25%),
+                linear-gradient(135deg, #080014, #17002d, #05000c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ================= STARS ================= */
+
+        .stars,
+        .stars::before,
+        .stars::after {
+            position: fixed;
+            inset: 0;
+            content: "";
+            pointer-events: none;
+        }
+
+        .stars {
+            background-image:
+                radial-gradient(2px 2px at 20% 30%, white, transparent),
+                radial-gradient(2px 2px at 70% 20%, white, transparent),
+                radial-gradient(2px 2px at 40% 70%, white, transparent),
+                radial-gradient(2px 2px at 90% 60%, white, transparent),
+                radial-gradient(1px 1px at 60% 90%, white, transparent),
+                radial-gradient(1px 1px at 10% 80%, white, transparent);
+            animation: starsMove 8s linear infinite;
+        }
+
+        @keyframes starsMove {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-30px);
+            }
+        }
+
+        /* ================= MAIN CARD ================= */
+
+        .container {
+            width: 92%;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 55px 35px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 35px;
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.6),
+                inset 0 0 30px rgba(255, 255, 255, 0.03);
+        }
+
+        /* ================= SMALL TITLE ================= */
+
+        .small-title {
+            font-size: 16px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #ffb7e5;
+            margin-bottom: 15px;
+        }
+
+        /* ================= MAIN TITLE ================= */
+
+        h1 {
+            font-size: clamp(45px, 8vw, 85px);
+            line-height: 1;
+            margin-bottom: 15px;
+
+            background: linear-gradient(
+                90deg,
+                #fff,
+                #ff7bd5,
+                #ffd1f1,
+                #ff3cac
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            text-shadow: 0 0 40px rgba(255, 20, 147, 0.4);
+
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            from {
+                filter: drop-shadow(0 0 5px #ff1493);
+            }
+
+            to {
+                filter: drop-shadow(0 0 25px #ff1493);
+            }
+        }
+
+        /* ================= NAME ================= */
+
+        .name {
+            font-size: clamp(35px, 6vw, 65px);
+            font-weight: 800;
+            color: #ffd6f3;
+
+            text-shadow:
+                0 0 10px #ff1493,
+                0 0 30px #ff1493,
+                0 0 60px #ff1493;
+
+            animation: nameFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes nameFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* ================= MESSAGE ================= */
+
+        .message {
+            max-width: 650px;
+            margin: 25px auto;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #eee;
+        }
+
+        .highlight {
+            color: #ff91d8;
+            font-weight: bold;
+        }
+
+        /* ================= PHOTO ================= */
+
+        .photo {
+            width: 150px;
+            height: 150px;
+            margin: 30px auto;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                linear-gradient(#190025, #190025) padding-box,
+                linear-gradient(45deg, #ff1493, #ffd700, #8a2be2)
+                border-box;
+
+            border: 5px solid transparent;
+
+            box-shadow:
+                0 0 20px #ff1493,
+                0 0 50px rgba(255, 20, 147, .4);
+
+            font-size: 60px;
+
+            animation: photoGlow 3s infinite alternate;
+        }
+
+        @keyframes photoGlow {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        /* ================= CAKE ================= */
+
+        .cake {
+            width: 240px;
+            height: 170px;
+            margin: 40px auto 20px;
+            position: relative;
+        }
+
+        .cake-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+
+            width: 220px;
+            height: 85px;
+
+            border-radius: 12px 12px 25px 25px;
+
+            background: linear-gradient(
+                to bottom,
+                #ff80bf,
+                #e91e83
+            );
+
+            box-shadow:
+                inset 0 -10px 0 rgba(0,0,0,.1),
+                0 15px 25px rgba(0,0,0,.3);
+        }
+
+        .cake-top {
+            position: absolute;
+            top: 50px;
+            left: 10px;
+
+            width: 220px;
+            height: 40px;
+
+            border-radius: 50%;
+
+            background: #ffb7dd;
+
+            box-shadow: inset 0 -7px 0 #ff73b9;
+        }
+
+        .cream {
+            position: absolute;
+            top: 38px;
+            left: 20px;
+
+            width: 200px;
+            height: 35px;
+
+            border-radius: 50%;
+
+            background: #fff;
+        }
+
+        /* Candles */
+
+        .candle {
+            position: absolute;
+            top: 0;
+            width: 15px;
+            height: 55px;
+
+            border-radius: 5px;
+
+            background: repeating-linear-gradient(
+                45deg,
+                white 0 7px,
+                #ff4b9b 7px 14px
+            );
+
+            z-index: 3;
+        }
+
+        .candle.one {
+            left: 65px;
+        }
+
+        .candle.two {
+            left: 112px;
+        }
+
+        .candle.three {
+            left: 159px;
+        }
+
+        /* Flames */
+
+        .flame {
+            position: absolute;
+            top: -22px;
+
+            width: 18px;
+            height: 25px;
+
+            background: #ffd000;
+
+            border-radius: 50% 50% 50% 0;
+
+            transform: rotate(-45deg);
+
+            box-shadow:
+                0 0 10px #ff8c00,
+                0 0 25px #ff6a00;
+
+            animation: fire .5s infinite alternate;
+            z-index: 4;
+        }
+
+        .flame.one {
+            left: 63px;
+        }
+
+        .flame.two {
+            left: 110px;
+        }
+
+        .flame.three {
+            left: 157px;
+        }
+
+        @keyframes fire {
+            from {
+                transform: rotate(-45deg) scale(1);
+            }
+
+            to {
+                transform: rotate(-45deg) scale(1.25);
+            }
+        }
+
+        /* ================= BUTTON ================= */
+
+        .surprise-btn {
+            margin-top: 30px;
+            padding: 16px 35px;
+
+            border: none;
+            border-radius: 50px;
+
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            background: linear-gradient(
+                90deg,
+                #ff1493,
+                #8a2be2
+            );
+
+            box-shadow:
+                0 10px 30px rgba(255, 20, 147, .4);
+
+            transition: .3s;
+        }
+
+        .surprise-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+
+            box-shadow:
+                0 15px 40px rgba(255, 20, 147, .7);
+        }
+
+        /* ================= BALLOONS ================= */
+
+        .balloon {
+            position: fixed;
+            bottom: -150px;
+
+            width: 65px;
+            height: 80px;
+
+            border-radius: 50%;
+
+            z-index: 2;
+
+            animation: balloonFloat 12s linear infinite;
+        }
+
+        .balloon::after {
+            content: "";
+
+            position: absolute;
+            width: 2px;
+            height: 130px;
+
+            background: rgba(255,255,255,.5);
+
+            left: 50%;
+            top: 75px;
+        }
+
+        .b1 {
+            left: 5%;
+            background: #ff277f;
+            animation-delay: 0s;
+        }
+
+        .b2 {
+            left: 20%;
+            background: #7c4dff;
+            animation-delay: 3s;
+        }
+
+        .b3 {
+            right: 20%;
+            background: #00d4ff;
+            animation-delay: 5s;
+        }
+
+        .b4 {
+            right: 5%;
+            background: #ffd000;
+            animation-delay: 1s;
+        }
+
+        @keyframes balloonFloat {
+            0% {
+                transform: translateY(0) rotate(-5deg);
+            }
+
+            50% {
+                transform: translateY(-60vh) rotate(5deg);
+            }
+
+            100% {
+                transform: translateY(-120vh) rotate(-5deg);
+            }
+        }
+
+        /* ================= CONFETTI ================= */
+
+        .confetti {
+            position: fixed;
+            top: -20px;
+
+            width: 9px;
+            height: 15px;
+
+            z-index: 20;
+
+            animation: confettiFall 5s linear infinite;
+        }
+
+        .c1 { left: 8%; background: #ff0; animation-delay: .2s; }
+        .c2 { left: 18%; background: #0ff; animation-delay: 1s; }
+        .c3 { left: 30%; background: #f0f; animation-delay: 2s; }
+        .c4 { left: 43%; background: #ff7b00; animation-delay: .5s; }
+        .c5 { left: 55%; background: #00ff88; animation-delay: 3s; }
+        .c6 { left: 68%; background: #ff4081; animation-delay: 1.5s; }
+        .c7 { left: 80%; background: #7c4dff; animation-delay: 2.5s; }
+        .c8 { left: 92%; background: #00e5ff; animation-delay: 4s; }
+
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+
+            100% {
+                transform: translateY(110vh) rotate(720deg);
+            }
+        }
+
+        /* ================= POPUP ================= */
+
+        .popup {
+            position: fixed;
+            inset: 0;
+
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(0,0,0,.75);
+
+            z-index: 100;
+        }
+
+        .popup-box {
+            width: 90%;
+            max-width: 500px;
+
+            padding: 45px 30px;
+
+            text-align: center;
+
+            border-radius: 30px;
+
+            background: linear-gradient(
+                135deg,
+                #240038,
+                #51005e
+            );
+
+            border: 1px solid rgba(255,255,255,.2);
+
+            box-shadow:
+                0 0 60px rgba(255,20,147,.5);
+
+            animation: popup .5s ease;
+        }
+
+        .popup-box h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .popup-box p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #eee;
+        }
+
+        .close {
+            margin-top: 25px;
+            padding: 12px 28px;
+
+            border: none;
+            border-radius: 30px;
+
+            background: #ff1493;
+            color: white;
+
+            cursor: pointer;
+        }
+
+        @keyframes popup {
+            from {
+                transform: scale(.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width:600px) {
+
+            .container {
+                padding: 40px 20px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+
+            .photo {
+                width: 125px;
+                height: 125px;
+            }
+
+            .cake {
+                transform: scale(.8);
+                margin-top: 20px;
+            }
+
+            .balloon {
+                width: 45px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="stars"></div>
+
+    <!-- Balloons -->
+    <div class="balloon b1"></div>
+    <div class="balloon b2"></div>
+    <div class="balloon b3"></div>
+    <div class="balloon b4"></div>
+
+    <!-- Confetti -->
+    <div class="confetti c1"></div>
+    <div class="confetti c2"></div>
+    <div class="confetti c3"></div>
+    <div class="confetti c4"></div>
+    <div class="confetti c5"></div>
+    <div class="confetti c6"></div>
+    <div class="confetti c7"></div>
+    <div class="confetti c8"></div>
+
+
+    <!-- MAIN CARD -->
+
+    <main class="container">
+
+        <div class="small-title">
+            ✨ A Special Day ✨
+        </div>
+
+        <h1>
+            Happy Birthday
+        </h1>
+
+        <div class="name">
+            ABHINAV
+        </div>
+
+
+        <!-- Photo Placeholder -->
+
+        <div class="photo">
+            🎂
+        </div>
+
+
+        <p class="message">
+            Today is not just another day...
+            <br>
+            It's the celebration of someone
+            <span class="highlight">truly special! </span>
+            <br><br>
+
+            May your life be filled with
+            <span class="highlight">happiness, success, love</span>
+            and countless beautiful memories.
+            <br>
+
+            Keep smiling, keep dreaming,
+            and keep shining! ✨
+        </p>
+
+
+        <!-- Cake -->
+
+        <div class="cake">
+
+            <div class="flame one"></div>
+            <div class="flame two"></div>
+            <div class="flame three"></div>
+
+            <div class="candle one"></div>
+            <div class="candle two"></div>
+            <div class="candle three"></div>
+
+            <div class="cream"></div>
+            <div class="cake-top"></div>
+            <div class="cake-bottom"></div>
+
+        </div>
+
+
+        <button class="surprise-btn" onclick="openSurprise()">
+            🎁 Open Your Surprise
+        </button>
+
+    </main>
+
+
+    <!-- POPUP -->
+
+    <div class="popup" id="popup">
+
+        <div class="popup-box">
+
+            <h2>🎉 Surprise! 🎉</h2>
+
+            <p>
+                Wishing you the happiest birthday ever! 
+                <br><br>
+                May every dream you have come true,
+                and may this new chapter of your life
+                be even more amazing than the last.
+                <br><br>
+                🎂 Happy Birthday! 🥳✨
+            </p>
+
+            <button class="close" onclick="closeSurprise()">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function openSurprise() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closeSurprise() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+    </script>
+
+</body>
+</html>
