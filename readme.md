@@ -29,4 +29,4 @@
 ### 4. Lcm of two digits
 ### 5. Exit
 
-### 📌 Q12.    DS
+### 📌 Q12. 
